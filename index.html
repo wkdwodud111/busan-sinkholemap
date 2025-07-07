@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>부산 싱크홀 안전지도</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>부산 싱크홀 안전지도</h1>
+  <div class="container">
+    <div class="map-container">
+      <object type="image/svg+xml" data="busan_adm.svg" id="busan-map"></object>
+    </div>
+
+    <!-- 남구 정보 박스 -->
+    <div class="info-box" id="info-namgu" style="display: none;">
+      <h2>부산광역시 남구</h2>
+      <p><strong>📍 총 사고 수:</strong> 11건</p>
+      <hr />
+      <p><strong>🕒 최근사고 1</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2023-07-17 </li>
+        <li><strong>위치:</strong> 대연동 수영로, 경성대부경대역 3번 출구 엘리베이터 일원</li>
+        <li><strong>원인:</strong> 다짐(되메우기) 불량</li>
+        <li><strong>크기:</strong> 3.3m × 8m, 깊이 0.4m</li>
+        <li><strong>보수:</strong> 7.18.(화) 05시 포장 완료</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+      <hr />
+      <p><strong>🕒 최근사고 2</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2024-03-14 </li>
+        <li><strong>위치:</strong> 용당동 신선로 294, 신선대컨테이너터미널 정문 앞 도로</li>
+        <li><strong>원인:</strong> 기타매설물 손상</li>
+        <li><strong>크기:</strong> 0.9m × 1.3m, 깊이 1.5m</li>
+        <li><strong>보수:</strong> 3.14일 22시 포장 복구 완료</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+    </div>
+
+    <!-- 해운대구 정보 박스 -->
+    <div class="info-box" id="info-haeundaegu" style="display: none;">
+      <h2>부산광역시 해운대구</h2>
+      <p><strong>📍 총 사고 수:</strong> 4건</p>
+      <hr />
+      <p><strong>🕒 최근사고 1</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2019-06-20 </li>
+        <li><strong>위치:</strong> 부산광역시 해운대구 우동 825-1</li>
+        <li><strong>원인:</strong> 기타매설공사 부실</li>
+        <li><strong>크기:</strong> 1m × 1m, 깊이 1m</li>
+        <li><strong>보수:</strong> 되메우기 후 원상복구</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+      <hr />
+      <p><strong>🕒 최근사고 2</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2018-01-26 </li>
+        <li><strong>위치:</strong> 부산광역시 해운대구 좌동순환로 419 앞</li>
+        <li><strong>원인:</strong> 하수관 손상</li>
+        <li><strong>크기:</strong> 1m × 4m, 깊이 1m</li>
+        <li><strong>보수:</strong> 되메우기 후 원상복구</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+    </div>
+    <!-- 동래구 정보 박스 -->
+    <div class="info-box" id="info-dongnaegu" style="display: none;">
+      <h2>부산광역시 동래구</h2>
+      <p><strong>📍 총 사고 수:</strong> 15건</p>
+      <hr />
+      <p><strong>🕒 최근사고 1</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2024-07-03 </li>
+        <li><strong>위치:</strong> 부산광역시 동래구 온천동 1441-13번지</li>
+        <li><strong>원인:</strong> 기타</li>
+        <li><strong>크기:</strong> 0.6m × 1m, 깊이 2m</li>
+        <li><strong>보수:</strong> 상수도관 및 통신관: 누수 및 관로파손 확인 안됨<br/>
+          배수설비관, 도시가스관: 함몰구간 주변 관로 없음<br/>
+          도시철도 동래역 6번출구 주변 매몰된 H파일 및 토류벽 확인됨<br/>
+          해당구간 GPR 탐사결과, 해당구간 공동 없음<br/>
+          되메우기 복구 완료
+        </li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+      <hr />
+      <p><strong>🕒 최근사고 2</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2024-05-09 </li>
+        <li><strong>위치:</strong> 부산광역시 동래구 사직동 981-99번지</li>
+        <li><strong>원인:</strong> 기타매설공사 부실</li>
+        <li><strong>크기:</strong> 1m × 1m, 깊이 0.2m</li>
+        <li><strong>보수:</strong> 착부분 되메우기 재시공 및 포장복구 완료 등</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+    </div>
+    <!-- 연제구 정보 박스 -->
+    <div class="info-box" id="info-yeonjegu" style="display: none;">
+      <h2>부산광역시 연제구</h2>
+      <p><strong>📍 총 사고 수:</strong> 12건</p>
+      <hr />
+      <p><strong>🕒 최근사고 1</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2024-05-07 </li>
+        <li><strong>위치:</strong> 부산광역시 연제구 연산동 1799-3번지 (다온약국 앞)</li>
+        <li><strong>원인:</strong> 기타</li>
+        <li><strong>크기:</strong> 0.7m × 3m, 깊이 1m</li>
+        <li><strong>보수:</strong> 확인굴착 후 되메우기</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+      <hr />
+      <p><strong>🕒 최근사고 2</strong></p>
+      <ul>
+        <li><strong>날짜:</strong> 2022-11-26 </li>
+        <li><strong>위치:</strong> 부산광역시 연제구 연산동 연수로 179 앞 보도 (연산동 1867-2)</li>
+        <li><strong>원인:</strong> 하수관 손상</li>
+        <li><strong>크기:</strong> 2m × 3m, 깊이 3m</li>
+        <li><strong>보수:</strong> 하수관로 벽체 보수 후 되메우기 재시공 및 보도 포장 복구 완료</li>
+        <li><strong>사망:</strong> 0명</li>
+      </ul>
+    </div>
+     <!-- 수영구 정보 박스 -->
+  <div class="info-box" id="info-suyeonggu" style="display: none;">
+    <h2>부산광역시 수영구</h2>
+    <p><strong>📍 총 사고 수:</strong> 2건</p>
+    <hr />
+    <p><strong>🕒 최근사고 1</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2018-07-19</li>
+      <li><strong>위치:</strong> 부산광역시 수영구 광안해변로277번길 3 앞</li>
+      <li><strong>원인:</strong> 기타</li>
+      <li><strong>크기:</strong> 0.7m × 0.8m, 깊이 1m</li>
+      <li><strong>보수:</strong> 침하부분 되메우기 및 포장 복구 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+  </div>
+    <!-- 금정구 정보 박스 -->
+  <div class="info-box" id="info-geumjeonggu" style="display: none;">
+    <h2>부산광역시 금정구</h2>
+    <p><strong>📍 총 사고 수:</strong> 8건</p>
+    <hr />
+    <p><strong>🕒 최근사고 1</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2023-09-19 </li>
+      <li><strong>위치:</strong> 부산광역시 금정구 장전동 소정로 45</li>
+      <li><strong>원인:</strong> 기타매설물 손상</li>
+      <li><strong>크기:</strong> 0.5m × 0.5m, 깊이 3m</li>
+      <li><strong>보수:</strong> 하수박스 슬라브, 벽체 복구 및 도로 포장 복구</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+    <hr />
+    <p><strong>🕒 최근사고 2</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2022-06-25 </li>
+      <li><strong>위치:</strong> 부산광역시 금정구 금사동 110-6번지 앞</li>
+      <li><strong>원인:</strong> 다짐(되메우기) 불량</li>
+      <li><strong>크기:</strong> 1m × 1.5m, 깊이 1.5m</li>
+      <li><strong>보수:</strong> 침하 발생구간 굴착 및 골재포설 후 포장 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+  </div>
+      <!-- 북구 정보 박스 -->
+  <div class="info-box" id="info-bukgu" style="display: none;">
+    <h2>부산광역시 북구</h2>
+    <p><strong>📍 총 사고 수:</strong> 14건</p>
+    <hr />
+    <p><strong>🕒 최근사고 1</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2024-04-19</li>
+      <li><strong>위치:</strong> 부산광역시 북구 구포동 1222-22 (동성종합상가 일원)</li>
+      <li><strong>원인:</strong> 다짐(되메우기) 불량</li>
+      <li><strong>크기:</strong> 0.8m × 0.8m, 깊이 1.3m</li>
+      <li><strong>보수:</strong> 굴착 후 공동 재확인, 되메우기 및 다짐 등 복구공사 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+    <hr />
+    <p><strong>🕒 최근사고 2</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2024-01-28</li>
+      <li><strong>위치:</strong> 부산광역시 북구 금곡동 56-1번지</li>
+      <li><strong>원인:</strong> 하수관 손상</li>
+      <li><strong>크기:</strong> 0.3m × 0.5m, 깊이 2.1m</li>
+      <li><strong>보수:</strong> 항구복구 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+  </div>
+        <!-- 기장군 정보 박스 -->
+  <div class="info-box" id="info-gijanggun" style="display: none;">
+    <h2>부산광역시 기장군</h2>
+    <p><strong>📍 총 사고 수:</strong> 3건</p>
+    <hr />
+    <p><strong>🕒 최근사고 1</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2020-07-25</li>
+      <li><strong>위치:</strong> 부산광역시 기장군 정관면 달산리 44-45번지 앞 (산단5로)</li>
+      <li><strong>원인:</strong> 하수관 손상</li>
+      <li><strong>크기:</strong> 1.2m × 7m, 깊이 1m</li>
+      <li><strong>보수:</strong> 하수박스 손상부 복구 및 토사되메우기 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+    <hr />
+    <p><strong>🕒 최근사고 2</strong></p>
+    <ul>
+      <li><strong>날짜:</strong> 2020-07-24</li>
+      <li><strong>위치:</strong> 부산광역시 기장군 일광면 원리 748-2번지 일원 (부산~울산고속도로 원리 2교 하부)</li>
+      <li><strong>원인:</strong> 하수관 손상</li>
+      <li><strong>크기:</strong> 5m × 10m, 깊이 6m</li>
+      <li><strong>보수:</strong> 하수박스 손상부 복구 및 토사되메우기 완료</li>
+      <li><strong>사망:</strong> 0명</li>
+    </ul>
+  </div>
+  <!-- 부산진구 정보 박스 -->
+<div class="info-box" id="info-busanjingu" style="display: none;">
+  <h2>부산광역시 부산진구</h2>
+  <p><strong>📍 총 사고 수:</strong> 11건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2023-08-31</li>
+    <li><strong>위치:</strong> 부산광역시 부산진구 전포동 동천로 103</li>
+    <li><strong>원인:</strong> 상수관 손상</li>
+    <li><strong>크기:</strong> 1m × 1.4m, 깊이 1.1m</li>
+    <li><strong>보수:</strong> 상수도관 복구 및 도로복구 포장</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2023-06-11</li>
+    <li><strong>위치:</strong> 부산광역시 부산진구 부전동 서면로74</li>
+    <li><strong>원인:</strong> 굴착공사 부실</li>
+    <li><strong>크기:</strong> 0.3m × 0.3m, 깊이 2m</li>
+    <li><strong>보수:</strong> 확인굴착 후 되메우기 시행, 임시포장 완료</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 사상구 정보 박스 -->
+<div class="info-box" id="info-sasanggu" style="display: none;">
+  <h2>부산광역시 사상구</h2>
+  <p><strong>📍 총 사고 수:</strong> 17건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-09-21</li>
+    <li><strong>위치:</strong> 부산광역시 사상구 학장동 226-1 (새벽로90)</li>
+    <li><strong>원인:</strong> 기타</li>
+    <li><strong>크기:</strong> 4m × 8m, 깊이 5m</li>
+    <li><strong>보수:</strong> 지하시설물 정비 및 되메우기 후 아스팔트 포장 실시</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-08-20</li>
+    <li><strong>위치:</strong> 부산광역시 사상구 감전동 새벽로 122 인근</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 7m × 5m, 깊이 3.5m</li>
+    <li><strong>보수:</strong> 오수관로 및 측구, KT 통신설로 파손부 복구 후 전체 포장 복구 실시</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 동구 정보 박스 -->
+<div class="info-box" id="info-donggu" style="display: none;">
+  <h2>부산광역시 동구</h2>
+  <p><strong>📍 총 사고 수:</strong> 4건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2025-02-07 오전 00:00</li>
+    <li><strong>위치:</strong> 부산광역시 동구 초량동 45-46</li>
+    <li><strong>원인:</strong> 기타</li>
+    <li><strong>크기:</strong> 6m × 25m, 깊이 0.1m</li>
+    <li><strong>보수:</strong> 도로 재포장</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 서구 정보 박스 -->
+<div class="info-box" id="info-seogu" style="display: none;">
+  <h2>부산광역시 서구</h2>
+  <p><strong>📍 총 사고 수:</strong> 11건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-07-26 </li>
+    <li><strong>위치:</strong> 부산광역시 서구 충무동2가 4-5</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 0.6m × 1.2m, 깊이 1m</li>
+    <li><strong>보수:</strong> 누수지점 인근 측구로 유도 배수 및 토사 유출부 골재 채움 및 다짐</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2023-08-01 </li>
+    <li><strong>위치:</strong> 부산광역시 강서구 구랑동 878-8번지 일원 (보도)</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 1.2m × 10m, 깊이 2m</li>
+    <li><strong>보수:</strong> 토사유실구간 등 혼합골재 되메우기 및 안전휀스 설치</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 사하구 정보 박스 -->
+<div class="info-box" id="info-sahagu" style="display: none;">
+  <h2>부산광역시 사하구</h2>
+  <p><strong>📍 총 사고 수:</strong> 16건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-04-25</li>
+    <li><strong>위치:</strong> 부산광역시 사하구 괴정동 207-52번지 앞 도로</li>
+    <li><strong>원인:</strong> 다짐(되메우기) 불량</li>
+    <li><strong>크기:</strong> 6m × 2.7m, 깊이 0.7m</li>
+    <li><strong>보수:</strong> 흙 다지기 및 되메우기 재시공 및 포장 복구 완료</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2023-04-11</li>
+    <li><strong>위치:</strong> 부산광역시 사하구 장림동 1086-3번지 선 도로</li>
+    <li><strong>원인:</strong> 다짐(되메우기) 불량</li>
+    <li><strong>크기:</strong> 0.8m × 1.3m, 깊이 0.4m</li>
+    <li><strong>보수:</strong> 되메우기 및 다짐기계로 다진 후 아스팔트 임시포장</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 중구 정보 박스 -->
+<div class="info-box" id="info-junggu" style="display: none;">
+  <h2>부산광역시 중구</h2>
+  <p><strong>📍 총 사고 수:</strong> 2건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2020-07-30 </li>
+    <li><strong>위치:</strong> 부산광역시 중구 영주동 1-144</li>
+    <li><strong>원인:</strong> 기타</li>
+    <li><strong>크기:</strong> 3m × 2m, 깊이 1.5m</li>
+    <li><strong>보수:</strong> 침하지 복구(골재 채움 및 잔여 침하로 인하여 콘크리트 기층 포장) 및 주변 하수시설 비굴착 보수공사 시행</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 영도구 정보 박스 -->
+<div class="info-box" id="info-yeongdogu" style="display: none;">
+  <h2>부산광역시 영도구</h2>
+  <p><strong>📍 총 사고 수:</strong> 4건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-09-10</li>
+    <li><strong>위치:</strong> 부산광역시 영도구 청학동 85 (조내기로 33)</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 1m × 1m, 깊이 1m</li>
+    <li><strong>보수:</strong><br/>
+      '24. 9. 10.(화) 17:00 도로침하 민원접수<br/>
+      17:30 안전조치 및 차량통제(도로·하수 현장반, 영도경찰서)<br/>
+      20:00 확인굴착 시행<br/>
+      20:30 횡단측구 벽체 파손 발견<br/>
+      22:30 임시복구 완료 (포장 미실시: 아스콘 미생산)<br/>
+      '24. 9. 11.(수) 11:00 아스콘 포장 및 벽체 복구
+    </li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2024-07-31</li>
+    <li><strong>위치:</strong> 부산광역시 영도구 동삼동 510-42</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 3m × 2m, 깊이 2m</li>
+    <li><strong>보수:</strong><br/>
+      2024.07.28.(일)<br/>
+      - 21:30 : 도로함몰 민원접수(당직실)<br/>
+      - 22:00 : 안전조치 및 차량통제(도로 현장반, 동삼지구대)<br/>
+      2024.07.29.(월)<br/>
+      - 02:00 : 현장확인 굴착 시행<br/>
+      - 06:00 : 하수관로 CCTV 조사<br/>
+      - 08:00 : 흄관 파손 확인<br/>
+      - 16:00 : 흄관 철거 및 하수관 연결 완료<br/>
+      - 22:00 : 되메우기 완료<br/>
+      2024.07.30.(화)<br/>
+      - 07:00 : 도로 포장 실시<br/>
+      - 13:00 : 포장 완료, 주변 정리 및 차량 통행 재개
+    </li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 강서구1 정보 박스 -->
+<div class="info-box" id="info-gangseogu1" style="display: none;">
+  <h2>부산광역시 강서구1</h2>
+  <p><strong>📍 총 사고 수:</strong> 3건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2023-08-01 </li>
+    <li><strong>위치:</strong> 부산광역시 강서구 구랑동 878-8번지 일원 (보도)</li>
+    <li><strong>원인:</strong> 하수관 손상</li>
+    <li><strong>크기:</strong> 1.2m × 10m, 깊이 2m</li>
+    <li><strong>보수:</strong> 토사유실구간 등 혼합골재 되메우기 및 안전휀스 설치</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+  <hr />
+  <p><strong>🕒 최근사고 2</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2020-06-03 </li>
+    <li><strong>위치:</strong> 부산광역시 강서구 송정동 1627-8번지 (경남은행 건물 주차장)</li>
+    <li><strong>원인:</strong> 굴착공사 부실</li>
+    <li><strong>크기:</strong> 40m × 40m, 깊이 1m</li>
+    <li><strong>보수:</strong> 시트파일 시공 및 D-ROG(디록)공법 시공</li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+<!-- 강서구2 정보 박스 -->
+<div class="info-box" id="info-gangseogu2" style="display: none;">
+  <h2>부산광역시 강서구2</h2>
+  <p><strong>📍 총 사고 수:</strong> 1건</p>
+  <hr />
+  <p><strong>🕒 최근사고 1</strong></p>
+  <ul>
+    <li><strong>날짜:</strong> 2019-04-22 오전 00:00</li>
+    <li><strong>위치:</strong> 부산광역시 강서구 명지동 3589-5번지 일원 도로</li>
+    <li><strong>원인:</strong> 기타</li>
+    <li><strong>크기:</strong> 27m × 13.4m, 깊이 1.4m</li>
+    <li><strong>보수:</strong><br/>
+      • '19.6월 원인규명 용역 완료<br/>
+      • '19.7월 이후 도로복구 예정
+    </li>
+    <li><strong>사망:</strong> 0명</li>
+  </ul>
+</div>
+</div>  
+  <script src="main.js"></script>
+</body>
+</html>
